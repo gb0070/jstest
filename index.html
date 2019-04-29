@@ -1,0 +1,226 @@
+<html>
+<head>
+<!-- Bootstrap CDN -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <title>Page Sandbox</title>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <base target=_blank>
+    <style>
+        body {
+            background-color: #ecf0f1;
+        }
+
+        .navbar-default {
+            max-height: 40px;
+            background-color: #2980b9 !important;
+            border-color: #2980b9;
+            color: #ecf0f1;
+        }
+
+        .navbar-right {
+            float: right;
+        }
+
+        .navbar-default .navbar-brand {
+            color: #ecf0f1 !important;
+        }
+
+        .navbar-default .navbar-nav>li>a {
+            color: #ecf0f1 !important;
+        }
+
+        .col-xs-6 {
+            float: none !important;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .center-block {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 200px;
+            margin-bottom: 20px;
+        }
+
+        .btn-group-wrap {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        div.btn-group {
+            margin: 0 auto;
+            text-align: center;
+            width: inherit;
+            display: inline-block;
+            padding-right: 5px;
+            padding-left: 5px;
+        }
+
+        .btn-primary {
+            color: #ecf0f1 !important;
+            background-color: #2980b9 !important;
+            border-color: #2980b9 !important;
+        }
+        </style>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">关于</a></li>
+                <li><a href="#Mail">使用须知</a></li>
+                <li><a href="#contact">高级功能</a></li>
+
+                <!--<li><a href="#contact"><i class="fa fa-th"></i></a></li>-->
+                <!--<li><a href="#contact"><i class="fa fa-bell"></i></a></li>-->
+                <!--<li><a href="#contact"><i class="fa fa-share-alt"></i></a></li>-->
+                <!--<li><a href="#"><i class="fa fa-user"></i></a></li>-->
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="span4"></div>
+        <div class="span4"><img class="center-block"
+                                src="https://raw.githubusercontent.com/ALeeMN/images-for-codepens/master/logo.jpg"
+                                width="270" height="95" alt="Google" id="logo"></div>
+        <div class="span4"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">
+            <div >
+                <div id="lable">请输入要访问的URL：</div>
+                <input type="text" id="txtURL" value="scholar.google.com" autofocus class="form-control">
+
+                <div class=box><span>切换线路:</span> <select id=selNode disabled=disabled>
+                    <option value=aliyun-hk>轻量云-香港（直连）</option>
+                    <option value=aliyun-sg>轻量云-新加坡（直连）</option>
+                    <option value=cf-aliyun-hk>轻量云-香港（CF 加速）</option>
+                    <option value=cf-aliyun-sg>轻量云-新加坡（CF 加速）</option>
+                </select></div>
+
+            </div>
+        </div>
+    </div>
+    <div class="btn-group-wrap">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" id="btnGo" disabled=disabled>初始化中...</button>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary" id="lucky">I'm Lucky</button>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="container">
+
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#">Advertising</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Settings</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>var i = 100, c = 103, r = 200, n = navigator.serviceWorker;
+
+function a() {
+    return location.href.replace(/[^/]+$/, "/")
+}
+
+function e() {
+    selNode.disabled = !1, n.addEventListener("message", function (t) {
+        var e = t.data, o = e[0], n = e[1];
+        switch (o) {
+            case c:
+                selNode.querySelector("*[value=" + n + "]").selected = !0;
+                break;
+            case r:
+                l(i), (new Image).src = "https://www.google.com/favicon.ico"
+        }
+    })
+}
+
+function o(t) {
+    txtURL.value = t
+}
+
+function l(t, e) {
+    var o = n.controller;
+    o ? o.postMessage([t, e]) : console.log("ctl is null")
+}
+lucky.onclick = function () {
+    var t = "https://www.google.com";
+    0 <= t.indexOf("-----") && (t = t.split("-----").pop(), txtURL.value = t), function o(t) {
+        var e = document.createElement("a");
+        e.rel = "noopener", e.href = t, e.click()
+    }(function e(t) {
+        return a() + "-----" + t
+    }(function n(t) {
+        return /^https?:\/\//i.test(t) ? t : /\.(com|cn|net|org|tv)$/.test(t) ? "https://" + t : "https://www.google.com/search?q=" + encodeURIComponent(t)
+    }(t)))
+}
+btnGo.onclick = function () {
+    var t = txtURL.value.trim();
+    0 <= t.indexOf("-----") && (t = t.split("-----").pop(), txtURL.value = t), function o(t) {
+        var e = document.createElement("a");
+        e.rel = "noopener", e.href = t, e.click()
+    }(function e(t) {
+        return a() + "-----" + t
+    }(function n(t) {
+        return /^https?:\/\//i.test(t) ? t : /\.(com|cn|net|org|tv)$/.test(t) ? "https://" + t : "https://www.google.com/search?q=" + encodeURIComponent(t)
+    }(t)))
+}, txtURL.onkeypress = function (t) {
+    13 === t.keyCode && btnGo.onclick()
+}, txtURL.setSelectionRange(0, txtURL.value.length), selNode.onchange = function () {
+    l(102, this.options[this.selectedIndex].value)
+};
+var t = [["google", ""], ["youtube", ""], ["twitter", "twitter.com/google"], ["flickr", ""], ["quora", "www.quora.com/topic/JavaScript-programming-language"], ["twitch", "www.twitch.tv"], ["reddit", ""], ["wiki", "zh.wikipedia.org"], ["gist", "gist.github.com"], ["facebook", "facebook.com/Google/"], ["blogger", ""]];
+window.onload = function () {
+    // list.innerHTML = t.map(function (t) {
+    //     var e = t[0];
+    //     return "<a rel=noopener href=/-----https://" + (t[1] || "www." + e + ".com") + "><img width=128 height=128 src=ico/" + e + ".png></a>"
+    // }).join("")
+},
+    function s() {
+        console.log("JsProxy v0.0.1 https://github.com/EtherDream/jsproxy/"), self.isSecureContext ? n && self.ReadableStream ? (btnGo.disabled = !1, btnGo.textContent = "Go Free", n.getRegistration().then(function (t) {
+            t ? (e(), l(i)) : n.register(a() + "x.js").then(e)["catch"](o)
+        })) : txtURL.value = "浏览器版本过低，推荐使用最新版 Chrome 浏览器" : txtURL.value = "本程序需要 HTTPS 站点"
+    }()</script>
+</body>
+</html>
