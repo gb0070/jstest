@@ -343,9 +343,9 @@
         t = ["at.alicdn.com", "img.alicdn.com", "g.alicdn.com", "i.alicdn.com", "atanx.alicdn.com", "wwc.alicdn.com", "gw.alicdn.com", "assets.alicdn.com", "aeis.alicdn.com", "atanx.alicdn.com", "sc01.alicdn.com", "sc02.alicdn.com", "sc03.alicdn.com", "sc04.alicdn.com", "img0.bdimg.com", "img1.bdimg.com", "img2.bdimg.com", "img3.bdimg.com", "img4.bdimg.com", "img5.bdimg.com", "webmap0.bdimg.com", "webmap1.bdimg.com", "iknowpc.bdimg.com", "static.zhihu.com", "pic1.zhimg.com", "pic2.zhimg.com", "pic3.zhimg.com", "pic4.zhimg.com", "pic5.zhimg.com", "pic7.zhimg.com", "upload.jianshu.io", "upload-images.jianshu.io", "cdn2.jianshu.io", "image.uc.cn", "csdnimg.cn", "g.csdnimg.cn", "img-ads.csdn.net", "img-egc.xvideos-cdn.com", "img-hw.xvideos-cdn.com", "img-l3.xvideos-cdn.com", "static-egc.xvideos-cdn.com", "cdn77-pic.xvideos-cdn.com", "ci.phncdn.com"],
         m = {
             "aliyun-hk": "singapore.gxueshu.com:8443",
-            "aliyun-sg": "singapore.gxueshu.com:8443",
-            "cf-aliyun-hk": "singapore.gxueshu.com:8443",
-            "cf-aliyun-sg": "singapore.gxueshu.com:8443"
+            "aliyun-sg": "singapore2.gxueshu.com:8443",
+            "cf-aliyun-hk": "singapore2.gxueshu.com:8443",
+            "cf-aliyun-sg": "singapore2.gxueshu.com:8443"
         }, u = "aliyun-hk"
 }, function (a, o, i) {
     "use strict";
